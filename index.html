@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- especificar que o documento é html -->
+<html lang="pt-br"> <!--atributo para linguagem -->
+<head> <!-- cabeçário que contém  informações sobre a página -->
+    <meta charset="UTF-8">
+    <title>BOB ESPONJA RUNNING GAME</title> <!--título do jogo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!--links externos e suas referências -->
+</head>
+<body> <!-- corpo da página -->
+    <nav><!--barra de navegação com o título-->
+        <div> <!--responsável por conter o título do jogo e as imagens relacionadas-->
+           <!--título--> <h1 ><img src="./img/bobepatrick.gif.png" height="50px"> <span>BOB ESPONJA
+                    RUNNING</span><!--permite que o título seja estilizado de forma independente das outras partes do título -->
+                <img src="./img/hamb3.gif.gif" height="40px">
+            </h1>
+        </div>
+    </nav>
+    <section> <!--agrupar o conteúdo em uma página html-->
+        <div style="height: 850px;"> <!--especificar a altura dessa div-->
+        <div id="container"> <!--fins de estruturação e estilização da página e organização-->
+            <div id="score">Score <b>00</b></div> <!--Uma div #score para exibir a pontuação-->
+            <div id="gameOver">Game Over</div>  <!--Uma div #gameOver para exibir a mensagem "Game Over"-->
+            <div id="player"> <!--Uma div #player com a imagem animada do Bob Esponja-->
+                <img src="./img/bobesp.gif" alt="player">
+            </div>
+            <div id="block"> <!--Uma div #block com a imagem animada de um hambúrguer-->
+                <img src="./img/hamb3.gif.gif" alt="blocks">
+            </div>
+            <br>
+            <div id="road"> <!--Uma div #road com a imagem da estrada-->
+                <img src="./img/road.png" alt="road">
+            </div>
+        </div>
+        <div>
+            <p><!-- paragráfo--> <strong class="fa-blink">PRESSIONE <u>A BARRA DE ESPAÇO</u> PARA INICIAR E SETA PARA CIMA (&#8593;) PARA
+                    PULAR</strong> <!--letra em negrito--></p> <br/> <!--pular linha-->
+        </div>
+    </div>
+    </section>
+    <footer> <!--rodapé de uma página ou de uma seção específica dentro de uma página-->
+        <!--parágrafo de texto, e a adição de uma classe--> <p class="p-2 m-0">© 2024 Todos os direitos reservados por Menininhas da Bru.<br> Gabriela Knaak, Adrielli Souza e Ellaiser Neiva.</p>
+    </footer>
+    <script src="script.js"></script> <!--incluir e executar código JavaScript-->
+</body>
+</html><!--fechamento da estrutura HTML-->

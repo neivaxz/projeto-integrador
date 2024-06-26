@@ -1,0 +1,151 @@
+* {
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+}
+ 
+span {
+   font-family: 'Press Start 2P', cursive;
+}
+ 
+p {
+   color: aliceblue;/* cor do pressione...*/
+}
+ 
+nav {
+   text-align: center;/* texto centralizado*/
+   background-color: rgb(188 154 230);/* fundo de cor*/
+}
+ 
+section {
+  
+   text-align: center;/* texto centralizado*/
+   height: 100%;
+   background-image: url('./img/fundo4.png');
+   background-repeat: no-repeat;/*significa que a imagem de fundo não será repetida*/
+   background-position: center center;  /*centraliza a imagem de fundo tanto horizontal quanto verticalmente*/
+}
+ /* Container principal do jogo */
+#container {
+   height: 615px;
+   width: 60%;
+   position: relative;/* define o posicionamento do elemento como relativo*/
+   overflow: hidden;/* qualquer conteúdo que exceda as dimensões do elemento será ocultado e não será exibido*/
+   display: inline-block;/* é uma propriedade que define o tipo de exibição de um elemento como inline (em linha)*/
+}
+  /* Estilo do jogador */
+#container #player {
+ 
+   position: absolute;
+   bottom: 20px;
+   left: 50px;
+}
+ 
+#container #player img {
+   height: 100px;
+   width: 100px;
+}
+ /* Animação do jogador pulando */
+.playerActive {
+   animation: animatePlayer 0.5s linear infinite;
+}
+ 
+@keyframes animatePlayer {
+ 
+   0%,
+   100% {
+      bottom: 20px;
+   }
+ 
+   45%,
+   55% {
+      bottom: 160px;
+   }/*são usadas para definir animações personalizadas e Ele tem uma animação animatePlayer que faz com que ele pule.*/
+}
+ /* Estilo dos blocos/obstáculos */
+#container #block {
+   height: 85px;
+   width: 125px;
+   position: absolute;
+   bottom: 20px;
+   right: -20px;
+}
+ 
+
+.blockActive {
+   animation: blockAnimate 1s linear infinite;/*No início da animação (0%), o bloco está fora da tela à direita (right: -125px)
+   No final da animação (100%), o bloco se move para a esquerda até sair da tela (right: 100%)*/
+}
+ 
+@keyframes blockAnimate {
+   0% {
+      right: -125px;
+   }
+ 
+   100% {
+      right: 100%;
+   }/*Eles têm uma animação blockAnimate que os faz se mover da direita para a esquerda.*/
+}
+ 
+#container #road {
+   height: 30px;
+   width: 1200px;
+   position: absolute;
+   bottom: 0;
+}/*Eles têm uma animação blockAnimate que os faz se mover da esquerda para a direita .*/
+ 
+#container #road img {
+   height: 30px;
+   width: 2000px;
+   position: absolute;
+   left: 0;
+   animation: none;
+}
+ 
+@keyframes roadAnimate {
+   0% {
+      left: 0;
+   }
+ 
+   100% {
+      left: -800px;
+   }
+}
+/* Estilo do placar */
+#score {
+   height: auto;
+   width: auto;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   font-family: 'Press Start 2P', cursive;
+   top: calc(21% - 40px);
+}
+  /* Estilo da mensagem de game over */
+#gameOver {
+  
+   font-size: 70px;
+   position: absolute;
+   left: calc(50% - 181px);
+   top: calc(21% - 40px);
+   width: 362px;
+   height: 80px;
+   color: #525252;
+   font-family: 'Press Start 2P', cursive;
+}
+ 
+footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 5;
+   background-color: rgb(188 154 230);
+   color: white;
+   text-align: center;
+   padding: 10px 0;
+}
+
+footer p {
+   color: black;
+}
